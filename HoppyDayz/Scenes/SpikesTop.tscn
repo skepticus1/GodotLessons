@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Hazards.gd" type="Script" id=1]
+[ext_resource path="res://HoppyDayzAssets/hobbydaysassets/GFX/Environment/spikes_top.png" type="Texture" id=2]
+
+[node name="SpikesTop" type="Area2D"]
+collision_layer = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.4, 0.00784314, 0.054902, 1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -34.3061, -26.5793, -47.7174, 25.33, 46.3191, 25.33, 32.4345, -27.2104, 26.2811, -27.2104, 14.2899, 16.9677, 2.45643, -26.8949, -2.90807, -27.0527, -15.6882, 18.23, -27.995, -26.5793 )
+
+[connection signal="body_entered" from="." to="." method="_on_SpikesTop_body_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Hazards_body_entered"]

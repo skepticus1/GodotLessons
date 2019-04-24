@@ -1,0 +1,128 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://HoppyDayzAssets/hobbydaysassets/GFX/HUD/bannerHanging.png" type="Texture" id=1]
+[ext_resource path="res://HoppyDayzAssets/hobbydaysassets/GFX/HUD/coin_bronze.png" type="Texture" id=2]
+[ext_resource path="res://HoppyDayzAssets/hobbydaysassets/Fonts/candles_.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://HoppyDayzAssets/hobbydaysassets/GFX/HUD/lifes.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=3]
+resource_name = "CoinPulse"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Banner/HBoxContainer/CoinIcon:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 1.11759e-008, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "Hurt"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Banner/HBoxContainer/LifeIcon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.792157, 0.054902, 0.054902, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "LifePulse"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath("Banner/HBoxContainer/LifeIcon:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ) ]
+}
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="Banner" type="TextureRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -355.0
+margin_top = 44.0
+margin_right = -39.0
+margin_bottom = 160.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Banner"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -308.748
+margin_top = 23.5863
+margin_right = -6.74805
+margin_bottom = 94.5863
+alignment = 1
+
+[node name="CoinIcon" type="TextureRect" parent="Banner/HBoxContainer"]
+margin_left = 8.0
+margin_right = 68.0
+margin_bottom = 71.0
+texture = ExtResource( 2 )
+
+[node name="CoinCount" type="Label" parent="Banner/HBoxContainer"]
+margin_left = 72.0
+margin_top = 9.0
+margin_right = 124.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "00"
+
+[node name="spacer" type="TextureRect" parent="Banner/HBoxContainer"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 128.0
+margin_right = 180.0
+margin_bottom = 71.0
+rect_min_size = Vector2( 30, 0 )
+texture = ExtResource( 4 )
+
+[node name="LifeIcon" type="TextureRect" parent="Banner/HBoxContainer"]
+margin_left = 184.0
+margin_right = 236.0
+margin_bottom = 71.0
+texture = ExtResource( 4 )
+
+[node name="LifeCount" type="Label" parent="Banner/HBoxContainer"]
+margin_left = 240.0
+margin_top = 9.0
+margin_right = 292.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 2 )
+text = "00"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/CoinPulse = SubResource( 3 )
+anims/Hurt = SubResource( 4 )
+anims/LifePulse = SubResource( 5 )
+

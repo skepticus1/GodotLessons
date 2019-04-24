@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/zapThreeToneUp.ogg-1ce8a1ed0120cbb4cf259297eb3d1e02.oggstr"
+
+[deps]
+
+source_file="res://HoppyDayzAssets/kenney_digitalaudio/Audio/zapThreeToneUp.ogg"
+dest_files=[ "res://.import/zapThreeToneUp.ogg-1ce8a1ed0120cbb4cf259297eb3d1e02.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

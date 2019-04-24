@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/SpikesTop.tscn" type="PackedScene" id=1]
+[ext_resource path="res://HoppyDayzAssets/hobbydaysassets/GFX/Environment/spikes_bottom.png" type="Texture" id=2]
+
+[node name="SpikesBottom" instance=ExtResource( 1 )]
+position = Vector2( -0.946678, 0.473343 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" parent="." index="1"]
+visible = true
+position = Vector2( -1.57779, -1.42001 )
+rotation = 3.14159
+

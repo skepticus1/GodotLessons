@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lowDown.ogg-b1b48bc4e2e2e6af876c2743945e0ce2.oggstr"
+
+[deps]
+
+source_file="res://HoppyDayzAssets/kenney_digitalaudio/Audio/lowDown.ogg"
+dest_files=[ "res://.import/lowDown.ogg-b1b48bc4e2e2e6af876c2743945e0ce2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

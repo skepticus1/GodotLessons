@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/powerUp4.ogg-c8634401cec323739ec5d518df6b3539.oggstr"
+
+[deps]
+
+source_file="res://HoppyDayzAssets/kenney_digitalaudio/Audio/powerUp4.ogg"
+dest_files=[ "res://.import/powerUp4.ogg-c8634401cec323739ec5d518df6b3539.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

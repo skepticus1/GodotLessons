@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/laser2.ogg-9e2d018012d1b34fb22f0bb7fe1c1141.oggstr"
+
+[deps]
+
+source_file="res://HoppyDayzAssets/kenney_digitalaudio/Audio/laser2.ogg"
+dest_files=[ "res://.import/laser2.ogg-9e2d018012d1b34fb22f0bb7fe1c1141.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
