@@ -6,6 +6,10 @@ func _process(delta):
 	update_motion(delta)
 	move_and_slide(motion)
 	
+func _input(event):
+	if Input.is_action_pressed("Toggle Flashlight"):
+		toggle_flashlight()
+	
 func update_motion(delta):
 	walk()
 	
@@ -29,3 +33,8 @@ func walk():
 		#lerp setting changes the motion value to 0 over the time of FRICTION value
 		motion.x = lerp(motion.x, 0, FRICTION)
 	
+func toggle_flashlight():
+	if $Torch.enabled:
+		$Torch.enabled = false
+	else:
+		$Torch.enabled = true
